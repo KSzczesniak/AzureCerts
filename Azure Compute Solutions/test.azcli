@@ -1,0 +1,9 @@
+az login
+
+az group create --name az204-cli-rg --location westeurope
+
+az vm create --resource-group az204-cli-rg --name az204-cli-vm --image Win2019Datacenter --admin-username demoadmin --admin-password Haslohaslo9*
+
+az vm open-port --resource-group az204-cli-rg --name az204-cli-vm --port 3389
+
+az group delete --name az204-rg -y
